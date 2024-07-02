@@ -1,0 +1,52 @@
+
+.order-detail{
+    font-size: 18px;
+
+    .row div {
+        margin: 10px 0 10px 0;
+    }
+
+    .title {
+        color: orange;
+        text-align: right;
+    }
+
+    .detail {
+        text-align: left;
+    }
+}
+.card-title {
+    color: #ffe6b7;
+}
+.card-title-note{
+    color: orange;
+}
+#green{
+    color:#2bff2b;
+}
+#red{
+    color: #ff2727;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .order-detail {
+        font-size: medium;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    .order-detail {
+        font-size: medium;
+    }
+  }

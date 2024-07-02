@@ -1,0 +1,23 @@
+mat-form-field {
+    width: 100%;
+}
+
+.action {
+    padding: 0px 25px 20px;
+    display: flex;
+    justify-content: end;
+}
+
+button {
+    color: white;
+}
+
+mat-error {
+    font-size: 12px;
+    margin-left: -15px;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+}

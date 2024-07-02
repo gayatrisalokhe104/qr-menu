@@ -1,0 +1,21 @@
+<div mat-dialog-title class="header">
+    {{actionBtn}} Category
+ </div>
+ <div mat-dialog-content>
+     <div class="row mt-3">
+         <form [formGroup]="addCategoryForm">
+             <mat-form-field appearance="outline">
+                 <mat-label>Category</mat-label>
+                 <input matInput formControlName="name" placeholder="Category Name">
+                 <mat-error *ngIf="addCategoryForm.get('name')?.hasError('required')">Category is required</mat-error>
+                 <mat-error *ngIf="addCategoryForm.get('name')?.hasError('pattern')">Only characters are allowed</mat-error>
+                 <mat-error *ngIf="addCategoryForm.get('name')?.hasError('minlength')">Minimum 3 characters are required</mat-error>
+                 <mat-error *ngIf="addCategoryForm.get('name')?.hasError('maxlength')">Maximum 30 characters are allowed</mat-error>
+             </mat-form-field>
+         </form>
+     </div>
+ </div>
+ <div mat-dialog-actions class="action">
+     <button mat-raised-button color="warn" style="color: black;" (click)="onCancel()">Cancel</button>
+     <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!addCategoryForm.valid">{{actionBtn}}</button>
+ </div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Dashboard</h2>
+
+    <div class="cardBox">
+        <div class="card" (click)="foodPage()">
+            <div class="content">
+                <div class="numbers">{{totalCategories?.length}}</div>
+            </div>
+            
+            <div class="iconBx">
+                <div class="cardName">Categories</div>
+                <i class="fa-regular fa-rectangle-list"></i>
+            </div>
+        </div>
+
+        <div class="card" (click)="foodPage()">
+            <div>
+                <div class="numbers">{{getFoodSize()}}</div>
+                <div class="cardName">Menu Items</div>
+            </div>
+            <div class="iconBx">
+                <i class="fa-solid fa-burger"></i>
+            </div>
+        </div>
+        <div class="card" (click)="ordersPage()">
+            <div>
+                <div class="numbers">{{ordersSize?.length}}</div>
+                <div class="cardName">Orders</div>
+            </div>
+            <div class="iconBx">
+                <i class="fa-regular fa-credit-card"></i>
+            </div>
+        </div>
+    </div>
+</div>

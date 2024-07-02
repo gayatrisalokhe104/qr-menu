@@ -1,0 +1,30 @@
+<div class="container p-3">
+    <h3 class="text-center mb-4">Today's Menu</h3>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let category of menuItems" class="mt-2">
+        <mat-expansion-panel-header>
+          <mat-panel-title style="color: orange;">
+            {{category.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="cardBox">
+          <div *ngFor="let food of category.foodList">
+            <div class="card">
+              <div class="card-body">
+                <span class="card-title fs-5">{{food?.name}}</span>
+                <h3 class="card-subtitle">{{food.price}} ₹</h3>
+                <p class="card-text">{{food.description}}</p>
+              </div>
+              <div class="cart-button">
+                <button mat-stroked-button color="primary" style="border-radius: 20px;" (click)="addtocart(food)">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+         </div>
+  
+      </mat-expansion-panel>
+    </mat-accordion>
+  
+  </div>
+

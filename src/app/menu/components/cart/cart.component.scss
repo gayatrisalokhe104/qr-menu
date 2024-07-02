@@ -1,0 +1,60 @@
+
+.empty{
+    width: 60%;
+    padding: 50px 10px 50px 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2{
+        color: red;
+    }
+    span{
+        cursor: pointer;
+        color: rgb(117, 117, 255);
+        text-decoration: underline;
+    }
+
+}
+
+mat-error {
+    font-size: 12px;
+    margin-left: -15px;
+}
+
+.contactForm {
+    width: 80%;
+    margin: auto;
+}
+mat-form-field {
+    width: 100%;
+
+    textarea {
+        resize: none;
+    }
+}
+
+
+.quantity {
+    border: none;
+    color: #fff;
+    background: #7b7b7b85;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    background-color: rgb(57, 57, 57); 
+    color: #fff;
+    border: 1px solid orange;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 5px;
+}
+

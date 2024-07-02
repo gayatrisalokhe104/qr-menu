@@ -1,0 +1,61 @@
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.cardBox .card {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-bottom: 5px solid #fb8c00;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #fb8c00;
+}
+
+.cardBox .card .cardName {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.cardBox .card .iconBx {
+    font-size: 2rem;
+    color: black
+}
+
+@media screen and (max-width: 768px) {
+    .cardBox {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .cardBox {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .cardBox {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+  }
+  
+  
+

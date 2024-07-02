@@ -1,0 +1,65 @@
+<div class="p-3">
+    <div mat-dialog-title>
+        <span style="text-align: start; color: #fb8c00;" >Order ID :</span> {{orderDetail.orderId}} 
+        <button mat-icon-button color="warn" style="float: right;" class="mt-1"
+        (click)="onCancel()"><mat-icon>close</mat-icon></button>
+    </div>
+   
+    <div mat-dialog-content>
+        <h2 class="mt-2 text-white">Customer Details</h2>
+        <hr>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Customer Name </th>
+              <th scope="col">Contact</th>
+              <th scope="col">Table No</th>
+              <th scope="col">Payment Status </th>
+              <th scope="col">Payment ID </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{orderDetail.customerName}}</td>
+              <td>{{orderDetail.phone}}</td>
+              <td>{{orderDetail.tableNumber}}</td>
+              <td><span [ngClass]="orderDetail.paymentStatus ? 'badge text-bg-success' : 'badge text-bg-warning'" style="font-size: 16px; font-weight: normal;">
+                {{orderDetail ? 'Paid' : 'Pending'}}</span></td>
+              <td>{{orderDetail?.paymentIntentId}}</td>
+            </tr>
+          </tbody>
+
+        </table>
+
+
+      <h2 class="text-white">Ordered Food</h2>
+        <hr>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Food Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Note</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let food of orderDetail.orderFoods">
+                <td>{{food.name}}</td>
+                <td>{{food.price}} ₹</td>
+                <td>{{food.quantity}}</td>
+                <td>{{food.note ? food.note : '--'}}</td>
+                <td>{{food.price * food.quantity}} ₹</td>
+              </tr>
+              <br>
+              <tr class="fw-bold total" style="border-top: 1px solid white;">
+                <td colspan="4"> Total Amount </td>
+                <td>{{orderDetail.totalAmount}} ₹</td>
+              </tr>
+            </tbody>
+
+          </table>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+mat-dialog-title {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.row p {
+    color: #fb8c00;
+}
+
+
+.table {
+     --bs-table-bg: transparent !important; 
+     --bs-table-color: #c7c7c7 !important;
+     border-color: #434343 !important;
+
+     th {
+        color: #fb8c00;
+     }
+     td {
+        color: #f0f0f0;
+     }
+}
+
+.total td {
+    color: #fb8c00
+}

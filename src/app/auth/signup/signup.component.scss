@@ -1,0 +1,43 @@
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+mat-card {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.example-card {
+    width: 450px;
+
+    mat-card-header {
+        margin: 20px 0 0 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    mat-card-content {
+        .row {
+            padding: 25px 25px 0 25px;
+        }
+    }
+
+    mat-card-actions {
+        padding: 0 0 25px 42px;
+    }
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+
+mat-error {
+    font-size: 12px;
+    margin-left: -15px;
+}

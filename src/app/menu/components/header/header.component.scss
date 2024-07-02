@@ -1,0 +1,51 @@
+mat-icon {
+    color: #ffe6b7;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    div mat-icon {
+        // margin-left: 20px;
+        color: orange;
+    }
+    li{
+        background-color: rgb(28, 28, 28);
+        text-align: center;
+        border-radius: 10px;
+
+        button {
+            border: none;
+        }
+    }
+
+    .nav-item {
+        margin-top: 5px;
+    }
+
+    .dsktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mobile {
+        display: none;
+    }
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #303030;
+    border-bottom: 2px solid orange; 
+    opacity: 10;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}

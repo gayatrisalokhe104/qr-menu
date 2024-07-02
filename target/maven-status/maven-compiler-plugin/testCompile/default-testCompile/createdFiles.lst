@@ -1,0 +1,9 @@
+com\qrbased\cafe\CafeApplicationTests.class
+com\qrbased\cafe\controller\OrderAdminControllerTest.class
+com\qrbased\cafe\controller\OrderControllerTest.class
+com\qrbased\cafe\service\impl\FoodServiceImplTest.class
+com\qrbased\cafe\controller\CategoryControllerTest.class
+com\qrbased\cafe\service\impl\OrderServiceImplTest.class
+com\qrbased\cafe\service\impl\CategoryServiceImplTest.class
+com\qrbased\cafe\controller\FoodControllerTest.class
+com\qrbased\cafe\dao\OrderRepoTest.class

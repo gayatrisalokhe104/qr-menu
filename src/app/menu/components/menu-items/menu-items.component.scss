@@ -1,0 +1,77 @@
+/* menu.component.css */
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .item-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Use Bootstrap button classes for styling */
+  .quantity-button {
+    margin: 0 5px;
+    font-size: small;
+  }
+  
+  
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.cardBox .card {
+  position: relative;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #353535;
+  border-bottom: 3px solid #353535;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: #ff991a3d 0px 3px 8px;
+
+  .card-body {
+      padding: 1px 10px 10px 10px;
+  }
+}
+
+.cart-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+button {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .cardBox {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cardBox {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cardBox {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}

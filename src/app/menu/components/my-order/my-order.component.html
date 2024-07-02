@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="head text-center">
+        <h2>My Order</h2>
+    </div>
+
+    <div class="order-detail" style="margin: 0 auto;">
+        <div class="row">
+            <div class="col-md-3 col-12">
+               <span class="title me-2"> Order Id:</span> {{myOrder?.orderId}}
+            </div>
+            <div class="col-md-3 col-12">
+                <span class="title me-2">Name: </span> {{myOrder?.customerName}}
+            </div>
+            <div class="col-md-3 col-12">
+                <span class="title me-2">Phone:</span>{{myOrder?.phone}}
+            </div>
+            <div class="col-md-3 col-12">
+                <span class="title me-2">Table No:</span>{{myOrder?.tableNumber}}
+            </div>
+            <div class="col-md-3 col-12">
+                <span class="title me-2">Amount:</span>{{myOrder?.totalAmount}} ₹
+            </div>
+            <div class="col-md-3 col-12">
+                <span class="title me-2">Payment status:</span><span [id]="getStatus(myOrder?.paymentStatus)">{{myOrder?.paymentStatus ? "Paid" : "Pending"}}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards" >
+        <div class="card mt-3" style="background-color: #232323; color: #fff;" *ngFor="let food of myOrder?.orderFoods">
+            <div class="card-body d-flex justify-content-between" style="align-items: center;">
+                <div>
+                    <h4 class="card-title">{{food.name}}</h4>
+                    <h4 class="card-subtitle mb-2"><span class="card-title">Price: </span>{{food.price}} ₹ &nbsp;&nbsp; <span class="card-title">Quantity: </span>{{food.quantity}}</h4>
+                    <p class="card-subtitle mb-2" *ngIf="food.note"><span class="card-title-note">Note: </span>{{food.note}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

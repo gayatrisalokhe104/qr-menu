@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Menu Items</h2>
+  
+    <div class="buttons d-flex justify-content-end">
+      <button mat-raised-button color="primary" class="mt-3 me-2" (click)="openCategoryDialog()"><mat-icon>add</mat-icon>
+        Add category</button>
+      <button mat-raised-button color="primary" class="mt-3 me-2" (click)="openDialog()"><mat-icon>add</mat-icon> Add Menu
+        Item</button>
+    </div>
+  
+    <div class="expansion mt-4">
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let cat of allCategories" class="mt-2">
+          <mat-expansion-panel-header>
+            <mat-panel-title  class="d-flex justify-content-between">
+              {{cat.name}}
+              <span>
+                <mat-icon color="primary" class="ms-3" (click)="editCategory(cat)" >edit</mat-icon>
+                <mat-icon color="primary" class="ms-2" 
+                (click)="deleteCategory(cat?.id)" >delete</mat-icon></span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          
+         <div class="cardBox">
+          <div class="card" *ngFor="let food of cat.foodList">
+            <div class="d-flex justify-content-end mt-2 me-2">
+              
+              <span class="d-flex align-item-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" [(ngModel)]="food.available"
+                  >
+                  <label class="form-check-label" style="color: grey;">
+                    Available
+                  </label>
+                </div>
+                <mat-icon color="primary" class="ms-3" (click)="editFood(food)">edit</mat-icon>
+                <mat-icon color="primary" class="ms-2" 
+                (click)="deleteFood(food?.id)" >delete</mat-icon></span>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{food?.name}}</h4>
+              <h5 class="card-subtitle mb-2">{{food.price}} ₹</h5>
+              <p class="card-text">{{food.description}}</p>
+            </div>
+          </div>
+         </div>
+         <div style="float: right; margin: 20px;" *ngIf="cat.foodList.length > 0">
+          <button mat-raised-button color="primary" (click)="updateAvailability(cat)">Update Availability</button>
+         </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  
+  </div>

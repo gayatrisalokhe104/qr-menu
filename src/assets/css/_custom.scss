@@ -1,0 +1,24 @@
+.modal1 {
+    background-color: #424242 !important;
+    padding: 0px 20px 0px 20px !important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) { 
+    background-color: transparent !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    background: linear-gradient(to right, rgb(71, 146, 17) 40%, rgb(77, 77, 77) 75%) !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__label {
+    color: white !important;
+}
+
+.mat-mdc-button .mdc-button__label {
+    color: white !important;
+}
+
+.mat-expansion-panel-body {
+    padding: 0 0 0 !important;
+  }

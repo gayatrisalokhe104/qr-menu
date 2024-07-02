@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid mt-3 pb-2" >
+    <a class="navbar-brand text-white" routerLink="/menu/card">TrioNxt Cafe</a>
+    <div class="d-flex justify-content-end">
+      <mat-icon routerLink="cart" class="mt-2 me-3 ms-auto mobile" matBadge={{getCartItemLength()}} matBadgeOverlap="true"
+        [matBadgeHidden]="getCartItemLength()<1">
+        shopping_cart
+      </mat-icon>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="changeIcon()">
+        <mat-icon>{{menu? "menu": "close"}}</mat-icon>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mt-2 mb-2 mb-lg-0">
+        <li class="nav-item" routerLink="/menu/card">
+          <button mat-stroked-button color="primary" class="ms-3">Menu</button>
+        </li>
+        <li class="nav-item" routerLink="my-order">
+          <button mat-stroked-button  class="ms-3" color="primary">My Order</button>
+        </li>
+      </ul>
+      <div class="d-flex justify-content-end">
+        <mat-icon routerLink="cart" class="mt-1 ms-auto dsktop" matBadge={{getCartItemLength()}} matBadgeOverlap="true"
+          [matBadgeHidden]="getCartItemLength()<1">
+          shopping_cart
+        </mat-icon>
+      </div>
+    </div>
+  </div>
+</nav>
+
