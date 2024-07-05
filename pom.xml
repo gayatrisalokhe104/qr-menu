@@ -125,8 +125,8 @@
 
    <distributionManagement>
 <repository>
-<idmaven-releases</id>
-<name>maven-releases</nane>
+<id>maven-releases</id>
+<name>maven-releases</name>
 <url>http://13.201.28.126:8081/repository/maven-releases/</url>
 </repository>
 <snapshotRepository>
